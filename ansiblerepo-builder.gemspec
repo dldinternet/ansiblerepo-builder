@@ -1,12 +1,12 @@
 # -*- encoding: utf-8 -*-
 
-require File.expand_path('../lib/ansiblerepo/builder/version', __FILE__)
+require File.expand_path('../lib/cicd/builder/ansiblerepo/version', __FILE__)
 
 Gem::Specification.new do |gem|
   gem.name          = "ansiblerepo-builder"
-  gem.version       = Ansiblerepo::Builder::VERSION
-  gem.summary       = %q{TODO: Summary}
-  gem.description   = %q{TODO: Description}
+  gem.version       = CiCd::Builder::AnsibleRepo::VERSION
+  gem.summary       = %q{Ansible playbook repo CI/CD builder}
+  gem.description   = %q{Ansible playbook repo CI/CD builder}
   gem.license       = "Apachev2"
   gem.authors       = ["Christo De Lange"]
   gem.email         = "rubygems@dldinternet.com"
@@ -16,6 +16,9 @@ Gem::Specification.new do |gem|
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ['lib']
+
+  gem.add_dependency 'chefrepo-builder', '> 0.1.0'
+  gem.add_dependency 'json', '= 1.7.7'
 
   gem.add_development_dependency 'bundler', '~> 1.0'
   gem.add_development_dependency 'rake', '~> 0.8'
