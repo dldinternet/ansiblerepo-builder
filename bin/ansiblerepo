@@ -4,7 +4,7 @@ require 'rubygems'
 
 path = File.dirname(__FILE__)
 if File.exists?("#{path}/../.gitignore")
-  %w(chefrepo-builder).each do |mod|
+  %w(chefrepo-builder cicd-builder).each do |mod|
     add_path = File.expand_path(File.join(path, "../../#{mod}", "lib"))
     $:.unshift(add_path)
   end
