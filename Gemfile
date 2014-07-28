@@ -1,5 +1,4 @@
-source :rubygems
-
+source "https://rubygems.org"
 gemspec
 
 gem 'chefrepo-builder',                :path => '../chefrepo-builder',                :group => :development
