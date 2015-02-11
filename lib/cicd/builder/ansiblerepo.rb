@@ -7,29 +7,30 @@ module CiCd
 
     require 'cicd/builder/ansiblerepo/version'
 
-    #noinspection ALL
-    class AnsibleRepoBuilder < ChefRepoBuilder
+    module AnsibleRepo
+      class Runner < ChefRepo::Runner
 
-      def initialize()
-        super
-        @default_options[:builder] = VERSION
-      end
+        def initialize()
+          super
+          @default_options[:builder] = VERSION
+        end
 
-      # ---------------------------------------------------------------------------------------------------------------
-      def getBuilderVersion
-        {
-            version:  VERSION,
-            major:    MAJOR,
-            minor:    MINOR,
-            patch:    PATCH,
-        }
-      end
-      # ---------------------------------------------------------------------------------------------------------------
-      def run()
-        $stdout.write("AnsibleRepoBuilder v#{CiCd::Builder::AnsibleRepo::VERSION}\n")
-        super
-      end
+        # ---------------------------------------------------------------------------------------------------------------
+        def getBuilderVersion
+          {
+              version:  VERSION,
+              major:    MAJOR,
+              minor:    MINOR,
+              patch:    PATCH,
+          }
+        end
+        # ---------------------------------------------------------------------------------------------------------------
+        def setup()
+          $stdout.write("AnsibleRepoBuilder v#{CiCd::Builder::AnsibleRepo::VERSION}\n")
+          super
+        end
 
+      end
     end
 
   end

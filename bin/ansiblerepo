@@ -30,4 +30,4 @@ $:.unshift(add_path)
 require 'cicd/builder/ansiblerepo'
 
 # =====================================================================================================================
-exit CiCd::Builder::AnsibleRepoBuilder.new().run()
+exit CiCd::Builder::AnsibleRepo::Runner.new().run()
