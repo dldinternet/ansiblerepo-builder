@@ -1,15 +1,14 @@
 PATH
   remote: .
   specs:
-    ansiblerepo-builder (0.4.0)
-      chefrepo-builder (>= 0.9.31, < 1.1)
-      cicd-builder (>= 0.9.47, < 1.1)
+    ansiblerepo-builder (0.4.2)
+      chefrepo-builder (>= 0.9.32, < 1.1)
       json (= 1.8.1)
 
 PATH
   remote: ../chefrepo-builder
   specs:
-    chefrepo-builder (0.9.31)
+    chefrepo-builder (0.9.32)
       cicd-builder (>= 0.9.47, < 1.1)
       json (= 1.8.1)
 
