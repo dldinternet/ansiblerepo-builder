@@ -8,6 +8,7 @@ module CiCd
     require 'cicd/builder/ansiblerepo/version'
 
     module AnsibleRepo
+      CLASS = 'CiCd::Builder::AnsibleRepo'
       class Runner < ChefRepo::Runner
 
         def initialize()
